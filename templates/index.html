@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+
+<head>
+   <title>温湿度仪表盘</title>
+   <link rel="stylesheet" href='../static/css/style.css' />
+   <link rel="icon" href="../static/img/favicon.svg">
+   <meta charset="utf-8">
+   <script src="../static/js/echarts.js"></script>
+</head>
+
+<body>
+   <div class="frame header center">
+      <img src="../static/img/HDU.png" id="header-img">
+   </div>
+
+   <div class="frame content">
+      <div class="title center">
+         <h1>温湿度数据</h1>
+      </div>
+      <div class="frame-dashboard">
+         <div class="panel">
+            <div id="dashboard-temp" class="dashboard"></div>
+            <div class="range">
+               <p id="label-threshold-temp" class="label"></p>
+               <input type="range" id="range-threshold-temp" class="thres" min="-10" max="40">
+            </div>
+         </div>
+         <div class="panel">
+            <div id="dashboard-humi" class="dashboard"></div>
+            <div class="range">
+               <input type="range" id="range-threshold-humi" class="thres" min="0" max="100">
+               <p id="label-threshold-humi" class="label"></p>
+            </div>
+         </div>
+      </div>
+      <div class="control-panel">
+         <button class="btn-control" id="btn-chart-realtime">实时</button>
+         <input type="text" placeholder="开始时间" id="input-start" />
+         <input type="text" placeholder="结束时间" id="input-stop" />
+         <button class="btn-control" id="btn-chart-interval">历史区间</button>
+         <input type="text" placeholder="邮箱地址 example@example.com" id="input-email">
+         <button id="btn-email-sub">订阅</button>
+         <button id="btn-email-unsub">退订</button>
+      </div>
+      <div id="chart-line" class="chart"></div>
+   </div>
+
+   <div class="frame footer center">
+      <footer>
+         <p>© Copyright 2022, Developed by Aryan Sjet</p>
+      </footer>
+   </div>
+   <script src="../static/js/main.js"></script>
+</body>
+
+</html>
